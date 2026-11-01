@@ -16,8 +16,7 @@ from typing import Annotated
 # 创建 MCP 服务器
 mcp = FastMCP(
     name="Ashare MCP",
-    instructions="这是一个股票行情数据服务，提供A股市场的行情数据查询功能。",
-    dependencies=["pandas", "requests"]
+    instructions="这是一个股票行情数据服务，提供A股市场的行情数据查询功能。"
 )
 
 # 定义数据模型
