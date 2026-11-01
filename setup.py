@@ -5,7 +5,7 @@ setup(
     version="1.0.0",
     packages=find_packages(),
     install_requires=[
-        "fastmcp>=0.1.0",
+        "fastmcp>=3,<4",
         "pandas",
         "requests",
     ],
