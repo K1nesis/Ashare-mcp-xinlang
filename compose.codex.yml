@@ -1,0 +1,14 @@
+name: ashare-mcp-xinlang
+services:
+  server:
+    build: .
+    container_name: ashare-mcp-xinlang
+    restart: unless-stopped
+    mem_limit: 384m
+    ports:
+      - "127.0.0.1:18003:9876"
+    logging:
+      driver: json-file
+      options:
+        max-size: 10m
+        max-file: "3"
