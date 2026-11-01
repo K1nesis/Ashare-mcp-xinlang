@@ -3,6 +3,7 @@ Ashare MCP 服务入口点
 """
 
 import argparse
+import sys
 from .server import mcp
 
 def main():
@@ -13,10 +14,10 @@ def main():
     args = parser.parse_args()
 
     if args.stdio:
-        print("启动 Ashare MCP 服务 (stdio 模式)")
+        print("启动 Ashare MCP 服务 (stdio 模式)", file=sys.stderr)
     else:
-        print("启动 Ashare MCP 服务 (stdio 模式)")
-        print("注意: 要使用 HTTP 模式，请使用 'fastmcp serve' 命令")
+        print("启动 Ashare MCP 服务 (stdio 模式)", file=sys.stderr)
+        print("注意: 要使用 HTTP 模式，请使用 'fastmcp serve' 命令", file=sys.stderr)
 
     # 使用标准输入输出模式
     mcp.run()
